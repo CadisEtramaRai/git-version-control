@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Git Version Control</title>
+    <style>
+      .container {
+        width: 400px;
+        background-color: black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: #fff;
+        min-height: 100px;
+        margin: 200px auto;
+      }
+      span,
+      button {
+        font-size: 60px;
+      }
+      button {
+        margin: 20px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button class="increase">+</button>
+      <span>0</span>
+      <button class="decrease">-</button>
+    </div>
+    <script>
+      const increase = document.querySelector(".increase");
+      const decrease = document.querySelector(".decrease");
+      const number = document.querySelector("span");
+      let count = 0;
+      increase.addEventListener("click", function () {
+        count++;
+        number.innerHTML = count;
+      });
+      decrease.addEventListener("click", function () {
+        count--;
+        number.innerHTML = count;
+      });
+    </script>
+  </body>
+</html>
